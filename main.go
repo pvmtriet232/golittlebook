@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
 	var triet = &Saiyan{
@@ -15,10 +17,7 @@ func main() {
 	fmt.Println(khoa.Power)
 }
 
-type Saiyan struct {
-	Name  string
-	Power int
-}
+// declare a struct
 
 func (s *Saiyan) Hello() {
 	s.Power = s.Power + 10000
