@@ -5,7 +5,7 @@ import (
 )
 
 func main() {
-	var triet = &Saiyan{
+	var triet = &models.Saiyan{
 		Name:  "Triet",
 		Power: 9000,
 	}
@@ -19,14 +19,14 @@ func main() {
 
 // declare a struct
 
-func (s *Saiyan) Hello() {
+func (s *models.Saiyan) Hello() {
 	s.Power = s.Power + 10000
 	// fmt.Printf("power inside a function %v\n", s.Power)
 	// fmt.Println(&s.Power, *&s.Power)
 }
 
-func NewSaiyan(name string, power int) Saiyan {
-	return Saiyan{
+func NewSaiyan(name string, power int) models.Saiyan {
+	return models.Saiyan{
 		Name:  name,
 		Power: power,
 	}
