@@ -7,16 +7,16 @@ import (
 )
 
 func main() {
-	var triet = &models.Saiyan{
-		Name:  "Triet",
-		Power: 9009,
+	gohan := &models.Saiyan{
+		Name:  "gohan",
+		Power: 9000,
+		Father: &models.Saiyan{
+			Name:   "goku",
+			Power:  10000,
+			Father: nil,
+		},
 	}
-	triet.Hello()
-	fmt.Println(triet.Power)
-	// fmt.Printf("triet power currently is: %v\n", triet.Power)
-	// fmt.Println(&triet.Power, *&triet.Power)
-	khoa := models.NewSaiyan("khoa", 9007)
-	fmt.Println(khoa.Power)
+	fmt.Println(*gohan.Father)
 }
 
 // declare a struct
