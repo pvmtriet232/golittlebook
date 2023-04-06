@@ -3,19 +3,22 @@ package main
 import "fmt"
 
 func main() {
-	goku := &saiyan{
-		Name:  "goku",
+	var triet = Saiyan{
+		Name:  "Triet",
 		Power: 9000,
 	}
-	Super(goku)
-	fmt.Println(goku.Power)
+	var ptr = &triet
+	ptr.Power = 5000
+
+	fmt.Println(triet)
+	fmt.Println(ptr)
 }
 
-func Super(s *saiyan) {
-	s.Power += 10000
-}
-
-type saiyan struct {
+type Saiyan struct {
 	Name  string
 	Power int
+}
+
+func (s *Saiyan) Hello() {
+	s.Power = s.Power + 10000
 }
