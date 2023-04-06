@@ -11,8 +11,8 @@ func main() {
 	fmt.Println(triet.Power)
 	// fmt.Printf("triet power currently is: %v\n", triet.Power)
 	// fmt.Println(&triet.Power, *&triet.Power)
-	khoa := NewSaiyan("Khoa", 9003)
-	fmt.Println(khoa)
+	khoa := NewSaiyan("khoa", 9007)
+	fmt.Println(khoa.Power)
 }
 
 type Saiyan struct {
