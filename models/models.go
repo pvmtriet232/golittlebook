@@ -14,9 +14,16 @@ func (s *Saiyan) Hello() {
 	// fmt.Println(&s.Power, *&s.Power)
 }
 
-// function that return a desired type
-func NewSaiyan(name string, power int) Saiyan {
-	return Saiyan{
+func NewSaiyan(name string, power int, Father *Saiyan) *Saiyan {
+	return &Saiyan{
+		Name:   name,
+		Power:  power,
+		Father: &Saiyan{},
+	}
+}
+
+func NSaiyan(name string, power int) *Saiyan {
+	return &Saiyan{
 		Name:  name,
 		Power: power,
 	}

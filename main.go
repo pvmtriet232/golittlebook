@@ -17,6 +17,13 @@ func main() {
 		},
 	}
 	fmt.Println(*gohan.Father)
+
+	Khoa := models.NewSaiyan("khoa", 7000, &models.Saiyan{
+		Name:   "Lam",
+		Power:  1000,
+		Father: nil,
+	})
+	fmt.Println(Khoa.Power)
 }
 
 // declare a struct
