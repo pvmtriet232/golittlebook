@@ -2,31 +2,14 @@ package main
 
 import (
 	"fmt"
-
-	"github.com/pvmtriet232/golittlebook/models"
 )
 
 func main() {
-	gohan := &models.Saiyan{
-		Name:  "gohan",
-		Power: 9000,
-		Father: &models.Saiyan{
-			Name:   "goku",
-			Power:  10000,
-			Father: nil,
-		},
+
+	scores := []int{2, 5, 2, 6, 67, 7, 1245, 234}
+	for index, num := range scores {
+		fmt.Printf("index : %v, number : %v\n", index, num)
 	}
-	fmt.Println(*gohan.Father)
-
-	Khoa := models.NewSaiyan("khoa", 7000, &models.Saiyan{
-		Name:   "Lam",
-		Power:  1000,
-		Father: nil,
-	})
-	fmt.Println(Khoa.Power)
-
-	triet := models.NSaiyan("triet", 100000)
-	fmt.Printf("Name is %v, Power is %v", triet.Name, triet.Power)
 
 }
 
