@@ -24,6 +24,10 @@ func main() {
 		Father: nil,
 	})
 	fmt.Println(Khoa.Power)
+
+	triet := models.NSaiyan("triet", 100000)
+	fmt.Printf("Name is %v, Power is %v", triet.Name, triet.Power)
+
 }
 
 // declare a struct
