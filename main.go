@@ -7,11 +7,11 @@ import (
 )
 
 func main() {
-	scores := []int{1,2,3,4,5}
-	slice := scores[0:4]
+	scores := []int{1, 2, 3, 4, 5}
+	slice := scores[2:4]
 	slice[0] = 999
 	fmt.Println(scores)
-	}
+}
 
 func NewSaiyan(name string, power int, father *models.Saiyan) models.Saiyan {
 	return models.Saiyan{
