@@ -2,19 +2,15 @@ package main
 
 import (
 	"fmt"
+	"strings"
 
 	"github.com/pvmtriet232/golittlebook/models"
 )
 
 func main() {
-	Vegeta := &models.Saiyan{Name: "Vegeta", Power: 9000, Father: &models.Saiyan{Name: "King Vegeta", Power: 15000}}
-	Goku := &models.Saiyan{Name: "Goku", Power: 10000, Father: &models.Saiyan{Name: "Bardock", Power: 8000}}
-	Broly := &models.Saiyan{Name: "Broly", Power: 50000, Father: &models.Saiyan{Name: "Paragus", Power: 3000}}
-	Gohan := &models.Saiyan{Name: "Gohan", Power: 8000, Father: nil}
-	warriors := []*models.Saiyan{Vegeta, Goku, Gohan, Broly}
-	fmt.Printf("power:%v\n", extractPowers(warriors))
-	fmt.Printf("power:%v\n", extractPowers(warriors))
-
+	haystack := "th spice must flow on the table of the supermarket"
+	findSpace := strings.Index(haystack[4:], " ")
+	fmt.Println(findSpace)
 }
 
 func NewSaiyan(name string, power int, father *models.Saiyan) models.Saiyan {
