@@ -2,23 +2,21 @@ package main
 
 import (
 	"fmt"
-	"strings"
+	"math/rand"
+	"sort"
 
 	"github.com/pvmtriet232/golittlebook/models"
 )
 
 func main() {
-	haystack := "th spice must flow on the table of the supermarket"
-	findSpace := strings.Index(haystack[4:], " ")
-	fmt.Println(findSpace)
-}
-
-func NewSaiyan(name string, power int, father *models.Saiyan) models.Saiyan {
-	return models.Saiyan{
-		Name:   name,
-		Power:  power,
-		Father: nil,
+	scores := make([]int, 100)
+	for i := 0; i < 100; i++ {
+		scores[i] = int(rand.Int31n(1000))
 	}
+	sort.Ints(scores)
+	worst := make([]int, 5)
+	copy(worst, scores[:5])
+	fmt.Println(worst)
 }
 
 // declare a slice, loop through the slice and extract index,power store
