@@ -12,14 +12,8 @@ func main() {
 	Broly := &models.Saiyan{Name: "Broly", Power: 50000, Father: &models.Saiyan{Name: "Paragus", Power: 3000}}
 	Gohan := &models.Saiyan{Name: "Gohan", Power: 8000, Father: nil}
 	warriors := []*models.Saiyan{Vegeta, Goku, Gohan, Broly}
-
-	Cell := NewSaiyan("Cell", 9000, nil)
-	warriors = append(warriors, &Cell)
-	fmt.Println(warriors[1].Name)
-	for index, _ := range warriors {
-
-		fmt.Printf("name: %v\n", warriors[index].Name)
-	}
+	fmt.Printf("power:%v\n", extractPowers(warriors))
+	fmt.Printf("power:%v\n", extractPowers(warriors))
 
 }
 
@@ -31,10 +25,22 @@ func NewSaiyan(name string, power int, father *models.Saiyan) models.Saiyan {
 	}
 }
 
-func extractPowers(s []*models.Saiyan) []int {
-	powers := make([]int, len(s))
-	for index, value := range s {
-		powers[index] = value.Power
+// declare a slice, loop through the slice and extract index,power store
+// in a slice name , then return power
+func extractPowers(saiyans []*models.Saiyan) []int {
+	powers := make([]int, len(saiyans))
+	for index, saiyan := range saiyans {
+		powers[index] = saiyan.Power
+	}
+	return powers
+}
+
+// declare a slice , loop through the slice of saiyans , append the value
+// of individual saiyan.power to the power slice, return the power slice
+func extractPowersNew(saiyans []*models.Saiyan) []int {
+	powers := make([]int, 0, 10)
+	for _, saiyan := range saiyans {
+		powers = append(powers, saiyan.Power)
 	}
 	return powers
 }
