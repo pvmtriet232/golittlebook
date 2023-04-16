@@ -10,13 +10,15 @@ import (
 
 func main() {
 	scores := make([]int, 100)
+	// load random values into every value
 	for i := 0; i < 100; i++ {
 		scores[i] = int(rand.Int31n(1000))
 	}
 	sort.Ints(scores)
-	worst := make([]int, 5)
-	copy(worst, scores[:5])
-	fmt.Println(worst)
+	// fmt.Println(scores)
+	top5smallest := make([]int, 5)
+	copy(top5smallest, scores[:5])
+	fmt.Println(top5smallest)
 }
 
 // declare a slice, loop through the slice and extract index,power store
