@@ -1,8 +1,6 @@
 package main
 
 import (
-	"fmt"
-
 	"github.com/pvmtriet232/golittlebook/db"
 )
 
@@ -22,7 +20,8 @@ func main() {
 		Power: 12002,
 	}
 
-	A := *&SaiyanList[1].Power
-	fmt.Println(A)
+	// A := *&SaiyanList[1].Power
+	// fmt.Println(A)
 
 }
+func SaiyanCheck
