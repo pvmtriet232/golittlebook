@@ -22,7 +22,7 @@ func main() {
 		Power: 12002,
 	}
 
-	A := &SaiyanList[1].Power
+	A := *&SaiyanList[1].Power
 	fmt.Println(A)
 
 }
