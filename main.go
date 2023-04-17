@@ -21,11 +21,11 @@ func main() {
 		Power: 12002,
 	}
 
-	// A := *&SaiyanList[1].Power
-	// fmt.Println(A)
-	a := db.LoadSaiyan(2)
-	fmt.Println(a)
+	ShowSaiyan(2)
 
-	// Name: vegeta, power: 19000
+}
 
+func ShowSaiyan(id int) {
+	item := db.LoadSaiyan(id)
+	fmt.Printf("Saiyan name: %v, Power :%v \n", item.Name, item.Power)
 }
