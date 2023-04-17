@@ -20,12 +20,17 @@ func main() {
 		Name:  "Nappa",
 		Power: 12002,
 	}
+	Broly := &db.Saiyan{
+		Name:  "broly",
+		Power: 1000000,
+	}
 
+	Broly.TestSaiyan()
 	ShowSaiyan(2)
-
 }
 
 func ShowSaiyan(id int) {
 	item := db.LoadSaiyan(id)
+
 	fmt.Printf("Saiyan name: %v, Power :%v \n", item.Name, item.Power)
 }
